@@ -1,7 +1,7 @@
 // * ////////////////////////// * //
 // * evitar interação com input * //
 // * ////////////////////////// * //
-$('.select input[type=text]').on('keydown paste cut',function(e){ if([9,116].includes(e.keyCode)){ e.preventDefault() } })
+$('.select input[type=text]').on('keydown paste cut',function(e){ if(![9,116].includes(e.keyCode)){ e.preventDefault() } })
 $('label.select').find('input[type=text]').on({'keydown':deselecionar}) 
 function deselecionar(e){
     if(e.keyCode == 9){
